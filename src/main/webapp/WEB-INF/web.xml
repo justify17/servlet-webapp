@@ -4,14 +4,34 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-  
+
+  <servlet>
+    <servlet-name>Main</servlet-name>
+    <servlet-class>com.academy.servlet.MainServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Main</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
   <servlet>
     <servlet-name>Train</servlet-name>
     <servlet-class>com.academy.servlet.TrainServlet</servlet-class>
   </servlet>
-  
+
   <servlet-mapping>
     <servlet-name>Train</servlet-name>
-    <url-pattern>/*</url-pattern>
+    <url-pattern>/train</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>PassengerRegistration</servlet-name>
+    <servlet-class>com.academy.servlet.RegistrationServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>PassengerRegistration</servlet-name>
+    <url-pattern>/passengerRegistration</url-pattern>
   </servlet-mapping>
 </web-app>

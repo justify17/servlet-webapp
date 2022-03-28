@@ -10,13 +10,15 @@ import java.util.List;
 public class PassengerService {
     private List<Ticket> storage = new ArrayList<>();
 
-    public void seatReservation(Passenger passenger, PassengerTrain train) {
+    public boolean seatReservation(Passenger passenger, PassengerTrain train) {
         Ticket ticket = ticketGeneration(passenger, train);
         if (ticket != null) {
             storage.add(ticket);
+            return true;
         } else {
             System.out.println("Все места на данный поезд забронированы.");
         }
+        return false;
     }
 
     private Ticket ticketGeneration(Passenger passenger, PassengerTrain train) {

@@ -45,6 +45,6 @@ public class AppLauncher {
         System.out.println(trainService.getTotalPassenger(passengerService, passengerTrain));
         System.out.println(trainService.getTotalBaggage(passengerService, passengerTrain));
         trainService.sortedCarriagesByComfortLevel(passengerTrain);
-        trainService.searchCarriagesByRangePassengers(3, 5, passengerService, passengerTrain);
+        System.out.println(trainService.searchCarriagesByRangePassengers(3, 5, passengerService, passengerTrain));
     }
 }

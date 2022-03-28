@@ -31,16 +31,21 @@ public class TrainService {
                 .collect(Collectors.toList()));
     }
 
-    public void searchCarriagesByRangePassengers(int min, int max, PassengerService passengerService, PassengerTrain passengerTrain) {
+    public String searchCarriagesByRangePassengers(int min, int max, PassengerService passengerService, PassengerTrain passengerTrain) {
+        StringBuilder sb = new StringBuilder();
         for (PassengerCarriage passengerCarriage : passengerTrain.getPassengerCarriages()) {
             long result = passengerService.getStorage().stream()
                     .filter(ticket -> ticket.getCarriageNumber() == passengerCarriage.getCarriageNumber())
                     .count();
             if (result >= min && result <= max) {
-                System.out.println("Вагон № " + passengerCarriage.getCarriageNumber() + ", число зарегистрированных" +
-                        " пассажиров: " + result);
+                sb.append("Carriage № ")
+                        .append(passengerCarriage.getCarriageNumber())
+                        .append(", number of registered passengers: ")
+                        .append(result)
+                        .append(".   ");
             }
         }
+        return sb.toString();
     }
 
     @Override
