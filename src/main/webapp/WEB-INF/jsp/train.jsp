@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html>
 	<head>
@@ -51,9 +52,9 @@
                 <button type="submit" name="action" value="addDinCarriage">Add</button>
             </fieldset>
         </form>
-        <% if(session.getAttribute("train") != null) { %>
+        <c:if test="${train != null}">
             Train:
-            <%= session.getAttribute("train") %>
-        <% } %>
+            ${train}
+        </c:if>
 	</body>
 </html>

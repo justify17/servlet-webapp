@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html>
 	<head>
@@ -13,11 +14,12 @@
             <fieldset>
                 <legend>Passenger registration:</legend>
                 Train:<br>
-                <% if(session.getAttribute("train") == null) { %>
+                <c:if test="${train == null}">
                     Train not created --> <a href="/servlet-webapp/train">New train<br><br></a>
-                <% } else { %>
+                </c:if>
+                <c:if test="${train != null}">
                     Passenger Train<br><br>
-                <% } %>
+                </c:if>
                 Baggage:<br>
                 <input name="baggage"><br>
                 Comfort level:<br>
@@ -27,11 +29,9 @@
                     <option>ECONOMY</option>
                 </select><br><br>
                 <button type="submit" name="action" value="passengerRegistration">Registration</button>
-                <%
-                    if(request.getAttribute("registrationResult") != null) {
-                        out.println(request.getAttribute("registrationResult"));
-                    }
-                %>
+                <c:if test="${registrationResult != null}">
+                    ${registrationResult}
+                </c:if>
             </fieldset>
         </form>
 	</body>
