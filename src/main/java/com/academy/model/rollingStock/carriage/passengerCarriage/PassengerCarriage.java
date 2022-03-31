@@ -1,6 +1,6 @@
-package com.academy.rollingStock.carriage.passengerCarriage;
+package com.academy.model.rollingStock.carriage.passengerCarriage;
 
-import com.academy.rollingStock.carriage.Carriage;
+import com.academy.model.rollingStock.carriage.Carriage;
 
 public class PassengerCarriage extends Carriage {
     private ComfortLevels comfortLevel;

@@ -1,6 +1,6 @@
-package com.academy.rollingStock.locomotive;
+package com.academy.model.rollingStock.locomotive;
 
-import com.academy.rollingStock.RailwayRollingStock;
+import com.academy.model.rollingStock.RailwayRollingStock;
 
 public class Locomotive implements RailwayRollingStock {
     private EngineTypes engineType;

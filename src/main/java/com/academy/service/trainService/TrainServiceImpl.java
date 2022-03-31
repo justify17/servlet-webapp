@@ -1,8 +1,8 @@
 package com.academy.service.trainService;
 
-import com.academy.rollingStock.carriage.passengerCarriage.PassengerCarriage;
+import com.academy.model.rollingStock.carriage.passengerCarriage.PassengerCarriage;
 import com.academy.service.passengerService.PassengerService;
-import com.academy.train.passengerTrain.PassengerTrain;
+import com.academy.model.train.passengerTrain.PassengerTrain;
 
 import java.util.stream.Collectors;
 

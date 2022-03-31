@@ -1,6 +1,6 @@
-package com.academy.train;
+package com.academy.model.train;
 
-import com.academy.rollingStock.RailwayRollingStock;
+import com.academy.model.rollingStock.RailwayRollingStock;
 
 public interface RailwayTransport {
     void addRollingStock(RailwayRollingStock rollingStock);

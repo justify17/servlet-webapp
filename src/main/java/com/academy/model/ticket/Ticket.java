@@ -1,7 +1,7 @@
-package com.academy.service.passengerService;
+package com.academy.model.ticket;
 
-import com.academy.passenger.Passenger;
-import com.academy.train.passengerTrain.PassengerTrain;
+import com.academy.model.passenger.Passenger;
+import com.academy.model.train.passengerTrain.PassengerTrain;
 
 public class Ticket {
     private Passenger passenger;

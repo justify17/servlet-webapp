@@ -1,4 +1,4 @@
-package com.academy.rollingStock;
+package com.academy.model.rollingStock;
 
 public interface RailwayRollingStock {
     String getDescription();

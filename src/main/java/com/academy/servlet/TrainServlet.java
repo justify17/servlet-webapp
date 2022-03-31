@@ -1,11 +1,11 @@
 package com.academy.servlet;
 
-import com.academy.rollingStock.carriage.DiningCarriage;
-import com.academy.rollingStock.carriage.passengerCarriage.ComfortLevels;
-import com.academy.rollingStock.carriage.passengerCarriage.PassengerCarriage;
-import com.academy.rollingStock.locomotive.EngineTypes;
-import com.academy.rollingStock.locomotive.Locomotive;
-import com.academy.train.passengerTrain.PassengerTrain;
+import com.academy.model.rollingStock.carriage.DiningCarriage;
+import com.academy.model.rollingStock.carriage.passengerCarriage.ComfortLevels;
+import com.academy.model.rollingStock.carriage.passengerCarriage.PassengerCarriage;
+import com.academy.model.rollingStock.locomotive.EngineTypes;
+import com.academy.model.rollingStock.locomotive.Locomotive;
+import com.academy.model.train.passengerTrain.PassengerTrain;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

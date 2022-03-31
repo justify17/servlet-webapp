@@ -1,9 +1,9 @@
-package com.academy.train.passengerTrain;
+package com.academy.model.train.passengerTrain;
 
-import com.academy.rollingStock.*;
-import com.academy.rollingStock.carriage.passengerCarriage.PassengerCarriage;
-import com.academy.rollingStock.locomotive.Locomotive;
-import com.academy.train.RailwayTransport;
+import com.academy.model.rollingStock.*;
+import com.academy.model.rollingStock.carriage.passengerCarriage.PassengerCarriage;
+import com.academy.model.rollingStock.locomotive.Locomotive;
+import com.academy.model.train.RailwayTransport;
 
 import java.util.ArrayList;
 import java.util.List;

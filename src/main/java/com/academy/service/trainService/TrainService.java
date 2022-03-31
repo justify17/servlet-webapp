@@ -1,7 +1,7 @@
 package com.academy.service.trainService;
 
 import com.academy.service.passengerService.PassengerService;
-import com.academy.train.passengerTrain.PassengerTrain;
+import com.academy.model.train.passengerTrain.PassengerTrain;
 
 public interface TrainService {
     long getTotalPassenger(PassengerService passengerService, PassengerTrain passengerTrain);

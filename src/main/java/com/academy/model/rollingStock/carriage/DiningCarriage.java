@@ -1,4 +1,4 @@
-package com.academy.rollingStock.carriage;
+package com.academy.model.rollingStock.carriage;
 
 public class DiningCarriage extends Carriage {
     private int quantityOfSeats;

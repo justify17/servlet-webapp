@@ -4,7 +4,7 @@ import com.academy.service.passengerService.PassengerService;
 import com.academy.service.trainService.TrainService;
 import com.academy.service.trainService.TrainServiceImpl;
 import com.academy.service.passengerService.PassengerServiceImpl;
-import com.academy.train.passengerTrain.PassengerTrain;
+import com.academy.model.train.passengerTrain.PassengerTrain;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

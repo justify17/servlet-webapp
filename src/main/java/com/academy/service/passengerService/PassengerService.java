@@ -1,7 +1,8 @@
 package com.academy.service.passengerService;
 
-import com.academy.passenger.Passenger;
-import com.academy.train.passengerTrain.PassengerTrain;
+import com.academy.model.passenger.Passenger;
+import com.academy.model.ticket.Ticket;
+import com.academy.model.train.passengerTrain.PassengerTrain;
 
 import java.util.List;
 

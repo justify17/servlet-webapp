@@ -1,16 +1,16 @@
 package com.academy;
 
-import com.academy.passenger.Passenger;
-import com.academy.rollingStock.carriage.DiningCarriage;
-import com.academy.rollingStock.carriage.passengerCarriage.ComfortLevels;
-import com.academy.rollingStock.carriage.passengerCarriage.PassengerCarriage;
-import com.academy.rollingStock.locomotive.EngineTypes;
-import com.academy.rollingStock.locomotive.Locomotive;
+import com.academy.model.passenger.Passenger;
+import com.academy.model.rollingStock.carriage.DiningCarriage;
+import com.academy.model.rollingStock.carriage.passengerCarriage.ComfortLevels;
+import com.academy.model.rollingStock.carriage.passengerCarriage.PassengerCarriage;
+import com.academy.model.rollingStock.locomotive.EngineTypes;
+import com.academy.model.rollingStock.locomotive.Locomotive;
 import com.academy.service.trainService.TrainService;
 import com.academy.service.trainService.TrainServiceImpl;
 import com.academy.service.passengerService.PassengerService;
 import com.academy.service.passengerService.PassengerServiceImpl;
-import com.academy.train.passengerTrain.PassengerTrain;
+import com.academy.model.train.passengerTrain.PassengerTrain;
 
 /**
  * Task 1

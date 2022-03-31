@@ -1,6 +1,6 @@
-package com.academy.passenger;
+package com.academy.model.passenger;
 
-import com.academy.rollingStock.carriage.passengerCarriage.ComfortLevels;
+import com.academy.model.rollingStock.carriage.passengerCarriage.ComfortLevels;
 
 public class Passenger {
     private final ComfortLevels comfort;

@@ -1,6 +1,6 @@
-package com.academy.rollingStock.carriage;
+package com.academy.model.rollingStock.carriage;
 
-import com.academy.rollingStock.RailwayRollingStock;
+import com.academy.model.rollingStock.RailwayRollingStock;
 
 public abstract class Carriage implements RailwayRollingStock {
     protected int weight;
