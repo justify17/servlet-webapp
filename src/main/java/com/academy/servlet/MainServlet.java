@@ -1,7 +1,9 @@
 package com.academy.servlet;
 
-import com.academy.service.TrainService;
 import com.academy.service.passengerService.PassengerService;
+import com.academy.service.trainService.TrainService;
+import com.academy.service.trainService.TrainServiceImpl;
+import com.academy.service.passengerService.PassengerServiceImpl;
 import com.academy.train.passengerTrain.PassengerTrain;
 
 import javax.servlet.ServletException;
@@ -12,13 +14,13 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class MainServlet extends HttpServlet {
-    private TrainService trainService = new TrainService();
+    private TrainService trainService = new TrainServiceImpl();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
         PassengerTrain train = (PassengerTrain) session.getAttribute("train");
-        PassengerService passengerService = (PassengerService) session.getAttribute("passengerService");
+        PassengerService passengerService = (PassengerServiceImpl) session.getAttribute("passengerService");
         if (train != null && passengerService != null) {
             long totalPassenger = trainService.getTotalPassenger(passengerService, train);
             session.setAttribute("totalPassenger", totalPassenger);
@@ -32,7 +34,7 @@ public class MainServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
         PassengerTrain train = (PassengerTrain) session.getAttribute("train");
-        PassengerService passengerService = (PassengerService) session.getAttribute("passengerService");
+        PassengerService passengerService = (PassengerServiceImpl) session.getAttribute("passengerService");
         if (req.getParameter("action").equals("sorting")) {
             trainService.sortedCarriagesByComfortLevel(train);
             req.setAttribute("sortedTrain", true);

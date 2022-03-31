@@ -6,8 +6,10 @@ import com.academy.rollingStock.carriage.passengerCarriage.ComfortLevels;
 import com.academy.rollingStock.carriage.passengerCarriage.PassengerCarriage;
 import com.academy.rollingStock.locomotive.EngineTypes;
 import com.academy.rollingStock.locomotive.Locomotive;
-import com.academy.service.TrainService;
+import com.academy.service.trainService.TrainService;
+import com.academy.service.trainService.TrainServiceImpl;
 import com.academy.service.passengerService.PassengerService;
+import com.academy.service.passengerService.PassengerServiceImpl;
 import com.academy.train.passengerTrain.PassengerTrain;
 
 /**
@@ -35,13 +37,13 @@ public class AppLauncher {
             passengerTrain.addRollingStock(new PassengerCarriage(ComfortLevels.COUPE, 32, 52));
             passengerTrain.addRollingStock(new PassengerCarriage(ComfortLevels.ECONOMY, 54, 58));
         }
-        PassengerService passengerService = new PassengerService();
+        PassengerService passengerService = new PassengerServiceImpl();
         for (int i = 0; i < 10; i++) {
             passengerService.seatReservation(new Passenger(ComfortLevels.LUX, 1), passengerTrain);
             passengerService.seatReservation(new Passenger(ComfortLevels.COUPE, 2), passengerTrain);
             passengerService.seatReservation(new Passenger(ComfortLevels.ECONOMY, 3), passengerTrain);
         }
-        TrainService trainService = new TrainService();
+        TrainService trainService = new TrainServiceImpl();
         System.out.println(trainService.getTotalPassenger(passengerService, passengerTrain));
         System.out.println(trainService.getTotalBaggage(passengerService, passengerTrain));
         trainService.sortedCarriagesByComfortLevel(passengerTrain);

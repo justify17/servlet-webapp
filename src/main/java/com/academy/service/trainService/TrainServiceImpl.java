@@ -1,4 +1,4 @@
-package com.academy.service;
+package com.academy.service.trainService;
 
 import com.academy.rollingStock.carriage.passengerCarriage.PassengerCarriage;
 import com.academy.service.passengerService.PassengerService;
@@ -6,13 +6,16 @@ import com.academy.train.passengerTrain.PassengerTrain;
 
 import java.util.stream.Collectors;
 
-public class TrainService {
+public class TrainServiceImpl implements TrainService{
+
+    @Override
     public long getTotalPassenger(PassengerService passengerService, PassengerTrain passengerTrain) {
         return passengerService.getStorage().stream()
                 .filter(ticket -> ticket.getTrain().equals(passengerTrain))
                 .count();
     }
 
+    @Override
     public int getTotalBaggage(PassengerService passengerService, PassengerTrain passengerTrain) {
         return passengerService.getStorage().stream()
                 .filter(ticket -> ticket.getTrain().equals(passengerTrain))
@@ -20,6 +23,7 @@ public class TrainService {
                         Integer::sum);
     }
 
+    @Override
     public void sortedCarriagesByComfortLevel(PassengerTrain passengerTrain) {
         passengerTrain.setTrain(passengerTrain.getTrain().stream()
                 .sorted((o1, o2) -> {
@@ -31,6 +35,7 @@ public class TrainService {
                 .collect(Collectors.toList()));
     }
 
+    @Override
     public String searchCarriagesByRangePassengers(int min, int max, PassengerService passengerService, PassengerTrain passengerTrain) {
         StringBuilder sb = new StringBuilder();
         for (PassengerCarriage passengerCarriage : passengerTrain.getPassengerCarriages()) {
