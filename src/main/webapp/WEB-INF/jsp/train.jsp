@@ -6,7 +6,9 @@
 		<title>
 			Train constructor
 		</title>
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<style type="text/css">
+            <%@ include file="../css/w3.css" %>
+        </style>
 	</head>
 	<body class="w3-light-grey">
 	    <jsp:include page="menu.jsp"></jsp:include>

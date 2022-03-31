@@ -6,7 +6,9 @@
 		<title>
 			WebApp
 		</title>
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<style type="text/css">
+            <%@ include file="../css/w3.css" %>
+        </style>
 	</head>
 	<body class="w3-light-grey">
 	    <div class="w3-selection w3-light-grey w3-padding">
